@@ -1,6 +1,6 @@
-# Wechat-applet-imitates-Bili
+# 微信小程序仿bili  
 
-## ~在BiliBili上面学习到的，只做了一点功能~
+## 在BiliBili上面学习到的，只做了一点功能
 
 
  **之前在bilibili上面的，老师的一些接口用的easymock,经常获取不到，做的时候非常难受，我自己在fastmock上面重新写了数据.**
