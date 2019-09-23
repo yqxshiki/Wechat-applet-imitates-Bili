@@ -1,0 +1,23 @@
+<view class="title">
+
+  <!-- logo -->
+  <navigator class="logo">
+    <image class="logo_img" src="../../images/logo2.png"></image>
+  </navigator>
+
+  <!-- search -->
+  <view class="search_icon">
+    <image src="../../images/search.png"></image>
+  </view>
+
+  <!-- 用户 -->
+  <view class="user_icon">
+    <image src="../../images/user.png"></image>
+  </view>
+  <!-- 下载按钮 -->
+  <view class="down_app">
+  下载App
+  </view>
+
+
+</view>

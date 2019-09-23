@@ -1,0 +1,60 @@
+<view class="main">
+
+  <appheader/>
+
+  <view class="info">
+    <video src="{{videoInfo.videoSrc}}" controls></video>
+
+    <!-- 详情 -->
+    <view class="title">
+      {{videoInfo.videoTitle}}</view>
+    <view class="detail">
+      <text class="author">{{videoInfo.author}}</text>
+      <text class="playcount">播放量{{videoInfo.playCount}}</text>
+      <text class="commentcount">{{videoInfo.commentCount}}弹幕</text>
+      <text class="date">发布时间{{videoInfo.date}}</text>
+    </view>
+  </view>
+
+  <!-- 推荐视频 -->
+  <view class="other">
+    <navigator class="item_other" wx:for="{{othersList}}" wx:key="{{index}}">
+
+      <view class="img-wrap">
+        <image src="{{item.imgSrc}}" mode="widthFix"></image>
+      </view>
+
+      <view class="other_inof">
+        <view class="other_title">{{item.title}}</view>
+
+        <view class="other_detail">
+          <view class="play_count">{{item.playMsg}}次观看</view>
+          <view class="comment_count">{{item.commentCount}}</view>
+        </view>
+
+      </view>
+    </navigator>
+  </view>
+
+  <!-- 评论 -->
+  <view class="comment_wrap">
+    <text>评论总数：{{commentData.commentTotalCount}}</text>
+
+    <view class="comment_item" wx:for="{{commentData.commentList}}" wx:key="{{index}}">
+      <view class="comment_user">
+        <image src="{{item.userIconSrc}}" mode="widthFix"></image>
+      </view>
+
+      <view class="comment_info">
+        <view class="comment_detail">
+          <text class="author">{{item.username}}</text>
+          <text class="data">发布时间：{{item.commentDate}}</text>
+        </view>
+
+        <view class="comment_content">
+          {{item.commentInfo}}</view>
+      </view>
+
+    </view>
+  </view>
+</view>

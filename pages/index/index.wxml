@@ -1,0 +1,49 @@
+<view class="main">
+  <appheader/>
+
+  <!-- nav -->
+  <view class="nav_wrap">
+    <scroll-view scroll-x class="nav">
+      <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index==currentIndenNav ?'avtive':' '}}" wx:for="{{navList}}" wx:key="{{index}}">
+        {{item.text}}
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 轮播图 -->
+  <view class="slides">
+    <swiper autoplay circular>
+      <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+        <navigator>
+          <image mode="widthFix" src="{{item.imgSrc}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <h1 class="tjian">热度视频</h1>
+  <!-- 视频 -->
+  <view class="video">
+    <navigator url="../detail/detail?id={{item.id}}" class="item" wx:for="{{videosList}}" wx:key="{{index}}">
+      <view class="video_img">
+
+        <image mode="widthFix" src="{{item.imgSrc}}"></image>
+
+        <view class="info">
+          <view class="play_count">
+            <text class="plycount">播放量：{{item.playCount}}</text>
+          </view>
+          <view class="comment_count">
+            <text>弹幕：{{item.commentCount}}</text>
+          </view>
+        </view>
+
+      </view>
+
+      <view class="video_title">
+        {{item.desc}}
+      </view>
+    </navigator>
+  </view>
+
+
+</view>
