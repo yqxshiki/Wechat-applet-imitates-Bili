@@ -14,12 +14,12 @@ Page({
   getCurrentVideo(videoid) {
     let that = this;
     wx.request({
-      url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videoDetail?id=' + videoid,
+      url: 'https://www.fastmock.site/mock/0cc8353a68511aad722aa387610a4ce1/bili/videoDetail',
       success(res) {
-        // console.log(res);
+        console.log(res.data.videoInfo.video)
         if (res.data.code == 0) {
           that.setData({
-            videoInfo: res.data.data.videoInfo
+            videoInfo: res.data.videoInfo.video
           })
         }
       }

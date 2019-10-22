@@ -3,11 +3,11 @@
   <appheader/>
 
   <view class="info">
-    <video src="{{videoInfo.videoSrc}}" controls></video>
+    <video :src="{{videoInfo.url}}" controls></video>
 
     <!-- 详情 -->
     <view class="title">
-      {{videoInfo.videoTitle}}</view>
+      {{videoInfo.describe}}</view>
     <view class="detail">
       <text class="author">{{videoInfo.author}}</text>
       <text class="playcount">播放量{{videoInfo.playCount}}</text>
